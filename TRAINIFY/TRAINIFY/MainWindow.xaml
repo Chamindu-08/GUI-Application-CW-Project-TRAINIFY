@@ -1,0 +1,48 @@
+﻿<Window x:Class="TRAINIFY.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRAINIFY"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="578*"/>
+            <RowDefinition Height="107*"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="626" Grid.RowSpan="2" Stroke="Black" VerticalAlignment="Top" Width="626" Grid.ColumnSpan="3" Margin="-13,0,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/IMG_4770.PNG" Stretch="Fill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="TRAINIFY" HorizontalAlignment="Left" Height="64" Margin="50,14,0,0" VerticalAlignment="Top" Width="310" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FlowDirection="RightToLeft" FontSize="50" FontFamily="Castellar" FontWeight="Bold" Grid.Column="1"/>
+        <Ellipse HorizontalAlignment="Left" Height="60" Margin="85,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="60" Grid.ColumnSpan="2">
+            <Ellipse.Style>
+                <Style/>
+            </Ellipse.Style>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Rectangle HorizontalAlignment="Left" Height="180" Margin="0,505,0,0" Grid.Row="1" VerticalAlignment="Top" Width="600" Fill="#FF002250" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Label Content="Let's book your train&#xD;&#xA;     with just a tap." HorizontalAlignment="Center" Height="158" Margin="0,354,0,0" VerticalAlignment="Top" Width="450" VerticalContentAlignment="Center" FontSize="40" FontFamily="Berlin Sans FB Demi" Grid.Row="1" Foreground="White" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontStretch="Normal" Grid.Column="1"/>
+        <Label Content="Make your unforgettable train travel experience with us." HorizontalAlignment="Left" Height="79" Margin="72,466,0,0" VerticalAlignment="Top" Width="466" VerticalContentAlignment="Center" FontSize="20" FontFamily="Times New Roman" Grid.Row="1" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontStretch="Normal" Grid.ColumnSpan="3">
+            <Label.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Label.Foreground>
+            <Label.Background>
+                <SolidColorBrush Opacity="0.255"/>
+            </Label.Background>
+        </Label>
+        <Button Content="Login Now" HorizontalAlignment="Left" Margin="99,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button Content="Register Now" HorizontalAlignment="Left" Margin="231,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Click="Button_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

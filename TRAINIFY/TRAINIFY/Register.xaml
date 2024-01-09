@@ -1,0 +1,55 @@
+﻿<Window x:Class="TRAINIFY.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRAINIFY"
+        mc:Ignorable="d"
+        Title="Register" Height="800" Width="750">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="205*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="174*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/2024_01_05_08_07_IMG_4677.JPG" Opacity="0.25"/>
+        </Grid.Background>
+        <Label Content="TRAINIFY" HorizontalAlignment="Left" Height="65" Margin="265,10,0,0" VerticalAlignment="Top" Width="220" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FlowDirection="RightToLeft" FontSize="35" FontFamily="Castellar" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="565" Stroke="Black" VerticalAlignment="Top" Width="500" UseLayoutRounding="False" Margin="125,135,0,0" Grid.RowSpan="8" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFC9C7A9"   Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="110" Margin="320,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2">
+            <Ellipse.Style>
+                <Style/>
+            </Ellipse.Style>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="200,209,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="1" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="3" Margin="200,0,0,0" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="NIC" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,209,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Contact No" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Margin="200,66,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirm password" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="5" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="CREATE ACCOUNT" HorizontalAlignment="Left" Height="50" Margin="250,36,0,0" VerticalAlignment="Top" Width="250" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Grid.Row="7" Grid.ColumnSpan="2"/>
+        <CheckBox Content="I have read, understood and agreed to the Terms of Use " HorizontalAlignment="Left" Margin="209,55,0,0" Grid.Row="6" VerticalAlignment="Top"  Height="19" Width="332" IsChecked="False" FontFamily="Times New Roman" FontSize="14" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="and the Privacy Policy" HorizontalAlignment="Left" Margin="307,6,0,0" Grid.Row="7" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" Height="30" Grid.ColumnSpan="2" Width="136"/>
+        <Label Content="Create new account." HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
