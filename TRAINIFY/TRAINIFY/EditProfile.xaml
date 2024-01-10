@@ -24,14 +24,14 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="194,209,0,0"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="350" Height="50" Margin="0,275,0,0"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="350" Height="50" Margin="0,342,0,0"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,408,0,0" TextWrapping="Wrap" Text="NIC" VerticalAlignment="Top" Width="165" Height="50"/>
-        <TextBox HorizontalAlignment="Left" Margin="379,209,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743"/>
-        <TextBox HorizontalAlignment="Left" Margin="379,408,0,0" TextWrapping="Wrap" Text="Contact No" VerticalAlignment="Top" Width="165" Height="50"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,474,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="350" Height="50"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Confirm password" VerticalAlignment="Top" Width="350" Height="50" Margin="0,540,0,0"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name :" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="194,209,0,0"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Address :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,275,0,0"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,342,0,0" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="194,408,0,0" TextWrapping="Wrap" Text="NIC :" VerticalAlignment="Top" Width="165" Height="50"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,209,0,0" TextWrapping="Wrap" Text="Last Name :" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,408,0,0" TextWrapping="Wrap" Text="Contact No :" VerticalAlignment="Top" Width="165" Height="50"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,474,0,0" TextWrapping="Wrap" Text="Password :" VerticalAlignment="Top" Width="350" Height="50"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Confirm password :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,540,0,0"/>
         <Button Content="CONFIRM" HorizontalAlignment="Center" Height="50" Margin="0,619,0,0" VerticalAlignment="Top" Width="200" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
         <Label Content="Edit profile" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
 

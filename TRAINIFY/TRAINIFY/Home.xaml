@@ -1,0 +1,127 @@
+﻿<Window x:Class="TRAINIFY.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRAINIFY"
+        mc:Ignorable="d"
+        Title="Home" Height="550" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/2024_01_05_08_07_IMG_4677.JPG" Opacity="0.25"/>
+        </Grid.Background>
+        <StackPanel Background="#FF002250" Width="200" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid Height="50" VerticalAlignment="Top" Margin="0,30,0,0">
+                <TextBlock Text="MENU" Foreground="White" HorizontalAlignment="Center" FontFamily="OCR A Extended" FontSize="40" VerticalAlignment="Center"></TextBlock>
+            </Grid>
+            <Menu Height="455" Background="Transparent" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <MenuItem Header="Home" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem.Icon>
+                        <Image Source="icon/home.png" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem Header="Search" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem.Icon>
+                        <Image Source="icon/search.png" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem Header="Booking" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem.Icon>
+                        <Image Source="icon/cursor-finger.png" Stretch="Fill"/>
+                    </MenuItem.Icon>
+
+                    <MenuItem Header="View Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                        <MenuItem.Icon>
+                            <Image Source="icon/overview.png" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="Edit Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                        <MenuItem.Icon>
+                            <Image Source="icon/user-pen.png" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="Profile" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20" Margin="50,0,50,0">
+                    <MenuItem.Icon>
+                        <Image Source="icon/user.png" Stretch="Fill"/>
+                    </MenuItem.Icon>
+
+                    <MenuItem Header="View Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                        <MenuItem.Icon>
+                            <Image Source="icon/overview.png" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="Edit Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                        <MenuItem.Icon>
+                            <Image Source="icon/user-pen.png" Stretch="Fill"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="Contact Us" Width="120" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem.Icon>
+                        <Image Source="icon/phone-call.png" Stretch="Fill"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </Menu>
+        </StackPanel>
+        <Label Content="TRAINIFY" HorizontalAlignment="Left" Height="65" Margin="357,10,0,0" VerticalAlignment="Top" Width="274" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FlowDirection="RightToLeft" FontSize="45" FontFamily="Castellar" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="330" Stroke="Black" VerticalAlignment="Top" Width="500" UseLayoutRounding="False" Margin="244,140,0,0">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFC9C7A9"   Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse HorizontalAlignment="Left" Height="110" Margin="439,86,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
+            <Ellipse.Style>
+                <Style/>
+            </Ellipse.Style>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label Content="    Find your train,&#xD;&#xA;let's make a journey." HorizontalAlignment="Left" Height="158" Margin="269,160,0,0" VerticalAlignment="Top" Width="450" VerticalContentAlignment="Center" FontSize="35" FontFamily="Berlin Sans FB Demi" Foreground="#FF002250" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontStretch="Normal"/>
+        <Label Content="Start Satation" HorizontalAlignment="Left" Margin="317,301,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Height="35" Width="145"/>
+        <Label Content="End Station" HorizontalAlignment="Left" Margin="557,301,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="25" Height="35" Width="130"/>
+        <Rectangle HorizontalAlignment="Left" Height="30" Margin="282,301,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="1.076,0.564">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/train-station.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="30" Margin="522,301,0,0" VerticalAlignment="Top" Width="30">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/train-station.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="317,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+            <ComboBoxItem>-SELECT-</ComboBoxItem>
+            <ComboBoxItem>GALLE</ComboBoxItem>
+            <ComboBoxItem>MATARA</ComboBoxItem>
+        </ComboBox>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="557,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman">
+            <ComboBoxItem>-SELECT-</ComboBoxItem>
+            <ComboBoxItem>GALLE</ComboBoxItem>
+            <ComboBoxItem>MATARA</ComboBoxItem>
+        </ComboBox>
+        <Button Content="SEARCH" HorizontalAlignment="Left" Height="50" Margin="404,401,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold"/>
+        <Ellipse HorizontalAlignment="Left" Height="110" Margin="45,368,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
+            <Ellipse.Style>
+                <Style/>
+            </Ellipse.Style>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</Window>

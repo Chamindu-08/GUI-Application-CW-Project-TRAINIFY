@@ -55,16 +55,36 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditBooking.xaml.cs">
+      <DependentUpon>EditBooking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditProfile.xaml.cs">
       <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResultAndBooking.xaml.cs">
+      <DependentUpon>ResultAndBooking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBookings.xaml.cs">
+      <DependentUpon>ViewBookings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewProfile.xaml.cs">
       <DependentUpon>ViewProfile.xaml</DependentUpon>
     </Compile>
+    <Page Include="EditBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +108,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultAndBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewBookings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +164,45 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="IMG_4770.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\cursor-finger.png" />
+    <Resource Include="icon\file-edit.png" />
+    <Resource Include="icon\home.png" />
+    <Resource Include="icon\lock.png" />
+    <Resource Include="icon\menu-burger.png" />
+    <Resource Include="icon\overview.png" />
+    <Resource Include="icon\phone-call.png" />
+    <Resource Include="icon\search.png" />
+    <Resource Include="icon\settings.png" />
+    <Resource Include="icon\user-pen.png" />
+    <Resource Include="icon\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\marker.png" />
+    <Resource Include="icon\train-station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="train-station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\key.png" />
+    <Resource Include="icon\userB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="userB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="money-check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

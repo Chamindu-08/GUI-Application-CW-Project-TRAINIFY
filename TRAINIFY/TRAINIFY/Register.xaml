@@ -38,14 +38,14 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="200,209,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="1" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="3" Margin="200,0,0,0" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="NIC" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Margin="50,209,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743" Grid.Column="1" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Contact No" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Margin="200,66,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirm password" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="5" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name :" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="200,209,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Address :" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="1" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="3" Margin="200,0,0,0" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="200,0,0,0" TextWrapping="Wrap" Text="NIC :" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,209,0,0" TextWrapping="Wrap" Text="Last Name :" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,0,0,0" TextWrapping="Wrap" Text="Contact No :" VerticalAlignment="Top" Width="165" Height="50" Grid.Row="4" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Margin="200,66,0,0" TextWrapping="Wrap" Text="Password :" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirm password :" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="5" Margin="200,66,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Button Content="CREATE ACCOUNT" HorizontalAlignment="Left" Height="50" Margin="250,36,0,0" VerticalAlignment="Top" Width="250" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Grid.Row="7" Grid.ColumnSpan="2"/>
         <CheckBox Content="I have read, understood and agreed to the Terms of Use " HorizontalAlignment="Left" Margin="209,55,0,0" Grid.Row="6" VerticalAlignment="Top"  Height="19" Width="332" IsChecked="False" FontFamily="Times New Roman" FontSize="14" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Label Content="and the Privacy Policy" HorizontalAlignment="Left" Margin="307,6,0,0" Grid.Row="7" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14" Height="30" Grid.ColumnSpan="2" Width="136"/>

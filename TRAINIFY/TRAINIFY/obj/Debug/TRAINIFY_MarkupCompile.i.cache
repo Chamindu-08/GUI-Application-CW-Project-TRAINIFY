@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\GitHub\TRAINIFY\TRAINIFY\obj\Debug\
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\
 TRAINIFY
 none
 false
 DEBUG;TRACE
-C:\GitHub\TRAINIFY\TRAINIFY\App.xaml
-51270765422
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\App.xaml
+9464446344
 
-10-1945946182
+14899733404
 13-1310406943
-EditProfile.xaml;Login.xaml;MainWindow.xaml;Register.xaml;ViewProfile.xaml;
+EditBooking.xaml;EditProfile.xaml;Home.xaml;Login.xaml;MainWindow.xaml;Register.xaml;ResultAndBooking.xaml;ViewBookings.xaml;ViewProfile.xaml;
 
 True
 

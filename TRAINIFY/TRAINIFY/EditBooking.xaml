@@ -1,0 +1,50 @@
+﻿<Window x:Class="TRAINIFY.EditBooking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TRAINIFY"
+        mc:Ignorable="d"
+        Title="EditBooking" Height="600" Width="700">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/2024_01_05_08_07_IMG_4677.JPG" Opacity="0.25"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Center" Height="400" Stroke="Black" VerticalAlignment="Top" Width="500" UseLayoutRounding="False" Margin="0,135,0,0">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFC9C7A9"   Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="TRAINIFY" HorizontalAlignment="Center" Height="65" Margin="0,10,0,0" VerticalAlignment="Top" Width="220" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FlowDirection="RightToLeft" FontSize="35" FontFamily="Castellar" FontWeight="Bold"/>
+        <Ellipse HorizontalAlignment="Center" Height="110" Margin="0,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
+            <Ellipse.Style>
+                <Style/>
+            </Ellipse.Style>
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label Content="Edit Booking" HorizontalAlignment="Left" Height="66" Margin="75,75,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
+        <Label Content="Booking Id" HorizontalAlignment="Left" Margin="192,220,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+            <ComboBoxItem Content="-SELECT-"/>
+        </ComboBox>
+        <Label Content="Train :" HorizontalAlignment="Left" Margin="192,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label Content="Time :" HorizontalAlignment="Left" Margin="192,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Button Content="CONFIRM" HorizontalAlignment="Center" Height="50" Margin="0,445,0,0" VerticalAlignment="Top" Width="200" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="270,263,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+            <ComboBoxItem Content="-SELECT-"/>
+        </ComboBox>
+        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="270,306,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+            <ComboBoxItem Content="-SELECT-"/>
+        </ComboBox>
+        <CheckBox Content="1st Class" HorizontalAlignment="Left" Height="20" Margin="283,354,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <CheckBox Content="2nd Class" HorizontalAlignment="Left" Height="20" Margin="283,379,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <CheckBox Content="3rd Class" HorizontalAlignment="Left" Height="20" Margin="283,403,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="373,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="373,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox HorizontalAlignment="Left" Margin="373,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+
+    </Grid>
+</Window>
