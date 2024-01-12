@@ -41,8 +41,8 @@
                 <SolidColorBrush Opacity="0.255"/>
             </Label.Background>
         </Label>
-        <Button Content="Login Now" HorizontalAlignment="Left" Margin="99,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Button Content="Register Now" HorizontalAlignment="Left" Margin="231,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Click="Button_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="Login Now" HorizontalAlignment="Left" Margin="99,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="Register Now" HorizontalAlignment="Left" Margin="231,563,0,0" Grid.Row="1" VerticalAlignment="Top" Height="60" Width="170" Background="White" FontSize="25" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="SkyBlue" Foreground="#FF002250" Grid.RowSpan="2" Click="Button_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

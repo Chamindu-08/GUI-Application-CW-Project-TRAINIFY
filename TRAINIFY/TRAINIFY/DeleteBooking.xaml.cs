@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace TRAINIFY
 {
     /// <summary>
-    /// Interaction logic for ViewProfile.xaml
+    /// Interaction logic for DeleteBooking.xaml
     /// </summary>
-    public partial class ViewProfile : Window
+    public partial class DeleteBooking : Window
     {
-        public ViewProfile()
+        public DeleteBooking()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

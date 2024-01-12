@@ -52,3 +52,7 @@ C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\EditBo
 C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\ViewBookings.g.cs
 C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\EditBooking.baml
 C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\ViewBookings.baml
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\Styles\RoundItems.baml
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\App.baml
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\DeleteBooking.g.cs
+C:\GitHub\GUI-Application-CW-Project-TRAINIFY\TRAINIFY\TRAINIFY\obj\Debug\DeleteBooking.baml

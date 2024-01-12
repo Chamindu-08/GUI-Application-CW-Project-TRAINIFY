@@ -28,9 +28,9 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox HorizontalAlignment="Left" Margin="258,76,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="1"/>
-        <PasswordBox HorizontalAlignment="Left" Height="50" Margin="258,144,0,0" VerticalAlignment="Top" Width="350" Grid.Row="1"/>
-        <Button Content="Login" HorizontalAlignment="Center" Height="50" Margin="0,235,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Grid.Row="1" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Margin="258,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15"/>
+        <PasswordBox HorizontalAlignment="Left" Height="50" Margin="258,144,0,0" VerticalAlignment="Top" Width="350" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="Login" HorizontalAlignment="Center" Height="50" Margin="0,235,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Grid.Row="1" FontWeight="Bold"/>
         <CheckBox Content="Remember me" HorizontalAlignment="Left" Margin="258,207,0,0" VerticalAlignment="Top" Height="25" Width="127" FontSize="15" FontFamily="Times New Roman" IsChecked="True" Grid.Row="1"/>
         <Label Content="" HorizontalAlignment="Left" Margin="328,204,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Times New Roman" Grid.Row="1"/>
         <Button Content="Forget Password" HorizontalAlignment="Left" Margin="498,207,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Background="{x:Null}" FlowDirection="RightToLeft" BorderBrush="{x:Null}" FontFamily="Times New Roman" FontSize="15"/>
@@ -46,6 +46,8 @@
                 <ImageBrush ImageSource="/key.png"/>
             </Rectangle.Fill>
         </Rectangle>
+        <Label Content="User Name :" HorizontalAlignment="Left" Height="24" Margin="264,79,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman" Grid.Row="1"/>
+        <Label Content="Password :" HorizontalAlignment="Left" Height="24" Margin="262,145,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman" Grid.Row="1"/>
 
     </Grid>
 </Window>

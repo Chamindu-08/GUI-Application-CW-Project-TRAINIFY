@@ -24,16 +24,24 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name :" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="194,209,0,0"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Address :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,275,0,0"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,342,0,0" TextChanged="TextBox_TextChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="194,408,0,0" TextWrapping="Wrap" Text="NIC :" VerticalAlignment="Top" Width="165" Height="50"/>
-        <TextBox HorizontalAlignment="Left" Margin="379,209,0,0" TextWrapping="Wrap" Text="Last Name :" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743"/>
-        <TextBox HorizontalAlignment="Left" Margin="379,408,0,0" TextWrapping="Wrap" Text="Contact No :" VerticalAlignment="Top" Width="165" Height="50"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,474,0,0" TextWrapping="Wrap" Text="Password :" VerticalAlignment="Top" Width="350" Height="50"/>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Confirm password :" VerticalAlignment="Top" Width="350" Height="50" Margin="0,540,0,0"/>
-        <Button Content="CONFIRM" HorizontalAlignment="Center" Height="50" Margin="0,619,0,0" VerticalAlignment="Top" Width="200" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
+        <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="50" FontFamily="Times New Roman" Margin="194,209,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Margin="0,275,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Margin="0,342,0,0" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="194,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="50" RenderTransformOrigin="0.501,0.743" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Margin="379,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,474,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="50" Margin="0,540,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="15"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="CONFIRM" HorizontalAlignment="Center" Height="50" Margin="0,619,0,0" VerticalAlignment="Top" Width="200" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
         <Label Content="Edit profile" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
+        <Label Content="First Name :" HorizontalAlignment="Left" Height="24" Margin="194,209,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Last Name :" HorizontalAlignment="Left" Height="24" Margin="379,209,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Address :" HorizontalAlignment="Left" Height="24" Margin="200,275,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Email :" HorizontalAlignment="Left" Height="24" Margin="200,343,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="NIC :" HorizontalAlignment="Left" Height="24" Margin="194,409,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Contact No :" HorizontalAlignment="Left" Height="24" Margin="379,409,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Password :" HorizontalAlignment="Left" Height="24" Margin="200,475,0,0" VerticalAlignment="Top" Width="76" FontFamily="Times New Roman"/>
+        <Label Content="Confirm password :" HorizontalAlignment="Left" Height="24" Margin="201,541,0,0" VerticalAlignment="Top" Width="107" FontFamily="Times New Roman"/>
 
     </Grid>
 </Window>

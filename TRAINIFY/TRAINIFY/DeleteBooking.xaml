@@ -1,11 +1,11 @@
-﻿<Window x:Class="TRAINIFY.ViewBookings"
+﻿<Window x:Class="TRAINIFY.DeleteBooking"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRAINIFY"
         mc:Ignorable="d"
-        Title="ViewBookings" Height="600" Width="700">
+        Title="DeleteBooking" Height="600" Width="700">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/2024_01_05_08_07_IMG_4677.JPG" Opacity="0.25"/>
@@ -24,7 +24,7 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Label Content="View Booking" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
+        <Label Content="Delete Booking" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
         <Label Content="Booking ID :" HorizontalAlignment="Left" Margin="192,220,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
@@ -33,12 +33,13 @@
         <Label Content="Time :" HorizontalAlignment="Left" Margin="192,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="241,466,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Left" Height="50" Margin="386,466,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="175,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Center" Height="50" Margin="0,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,380,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,415,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="CANCEL" HorizontalAlignment="Left" Height="50" Margin="423,462,0,0" VerticalAlignment="Top" Width="120" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
 
     </Grid>
 </Window>

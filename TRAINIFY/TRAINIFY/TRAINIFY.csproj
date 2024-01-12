@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DeleteBooking.xaml.cs">
+      <DependentUpon>DeleteBooking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditBooking.xaml.cs">
       <DependentUpon>EditBooking.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
     <Compile Include="ViewProfile.xaml.cs">
       <DependentUpon>ViewProfile.xaml</DependentUpon>
     </Compile>
+    <Page Include="DeleteBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditBooking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResultAndBooking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\RoundItems.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="money-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\trash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
