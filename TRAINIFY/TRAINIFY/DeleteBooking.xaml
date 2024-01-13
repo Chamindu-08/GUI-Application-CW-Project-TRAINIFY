@@ -33,13 +33,13 @@
         <Label Content="Time :" HorizontalAlignment="Left" Margin="192,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="175,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Center" Height="50" Margin="0,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman"/>
+        <Button x:Name="btnView" Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="175,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509" Click="btnView_Click"/>
+        <Button x:Name="btnHome" Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Center" Height="50" Margin="0,462,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Click="btnHome_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,380,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,415,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
         <Label Content="" HorizontalAlignment="Left" Margin="268,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="CANCEL" HorizontalAlignment="Left" Height="50" Margin="423,462,0,0" VerticalAlignment="Top" Width="120" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
+        <Button x:Name="btnCancel" Style="{StaticResource RoundedButtonStyle}" Content="CANCEL" HorizontalAlignment="Left" Height="50" Margin="423,462,0,0" VerticalAlignment="Top" Width="120" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
 
     </Grid>
 </Window>

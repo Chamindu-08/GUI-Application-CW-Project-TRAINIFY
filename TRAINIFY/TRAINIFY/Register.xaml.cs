@@ -23,5 +23,87 @@ namespace TRAINIFY
         {
             InitializeComponent();
         }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            try 
+            {
+                //validating 
+                if (string.IsNullOrEmpty(txtFirstName.Text))
+                {
+                    MessageBox.Show("Please enter First Name.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtLastName.Text))
+                {
+                    MessageBox.Show("Please enter Last Name.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtAddress.Text))
+                {
+                    MessageBox.Show("Please enter Address.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtEmail.Text))
+                {
+                    MessageBox.Show("Please enter Email.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtNIC.Text))
+                {
+                    MessageBox.Show("Please enter NIC.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtContactNo.Text))
+                {
+                    MessageBox.Show("Please enter Contact No.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtPassword.Text))
+                {
+                    MessageBox.Show("Please enter Password.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txtConfirmPassword.Text))
+                {
+                    MessageBox.Show("Please enter Confirm Password.");
+                    return;
+                }
+
+                //check password are equal
+                if (txtPassword.Text != txtConfirmPassword.Text)
+                {
+                    MessageBox.Show("Passwords do not match. Please enter correctly.");
+                    return;
+                }
+
+                if (checkBoxAgree.IsChecked == false)                
+                {
+                    MessageBox.Show("Please confirm agreement.");
+                    return;
+                }
+
+                MessageBox.Show("Registation Succesfull!");
+
+                //database quary
+
+                // Create an object of the login window, show and MainWindow hide
+                Login login2 = new Login();
+                login2.Show();
+                this.Hide();
+
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

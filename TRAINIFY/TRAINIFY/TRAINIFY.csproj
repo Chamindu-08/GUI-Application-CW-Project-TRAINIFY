@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="DeleteBooking.xaml.cs">
       <DependentUpon>DeleteBooking.xaml</DependentUpon>
     </Compile>

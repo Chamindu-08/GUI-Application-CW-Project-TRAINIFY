@@ -25,9 +25,35 @@ namespace TRAINIFY
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            try 
+            {
+                // Create an object of the Login window, show and MainWindow hide
+                Login login = new Login();
+                login.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Create an object of the Register window, show and MainWindow hide
+                Register register = new Register();
+                register.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

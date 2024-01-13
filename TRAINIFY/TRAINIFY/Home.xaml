@@ -21,13 +21,13 @@
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
 
-                <MenuItem Header="Home" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemHome" Header="Home" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemHome_Click">
                     <MenuItem.Icon>
                         <Image Source="icon/home.png" Stretch="Fill"/>
                     </MenuItem.Icon>
                 </MenuItem>
 
-                <MenuItem Header="Search" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemSearch" Header="Search" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemSearch_Click">
                     <MenuItem.Icon>
                         <Image Source="icon/search.png" Stretch="Fill"/>
                     </MenuItem.Icon>
@@ -38,19 +38,19 @@
                         <Image Source="icon/cursor-finger.png" Stretch="Fill"/>
                     </MenuItem.Icon>
 
-                    <MenuItem Header="View Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemViewBooking" Header="View Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemViewBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/overview.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Edit Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemEditBooking" Header="Edit Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemEditBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/user-pen.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Delete Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemDeleteBooking" Header="Delete Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemDeleteBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/trash.png" Stretch="Fill"/>
                         </MenuItem.Icon>
@@ -62,20 +62,20 @@
                         <Image Source="icon/user.png" Stretch="Fill"/>
                     </MenuItem.Icon>
 
-                    <MenuItem Header="View Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemViewProfile" Header="View Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemViewProfile_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/overview.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Edit Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemEditProfile" Header="Edit Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemEditProfile_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/user-pen.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
 
-                <MenuItem Header="Contact Us" Width="120" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemContactUs" Header="Contact Us" Width="120" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
                     <MenuItem.Icon>
                         <Image Source="icon/phone-call.png" Stretch="Fill"/>
                     </MenuItem.Icon>
@@ -110,17 +110,17 @@
                 <ImageBrush ImageSource="/train-station.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="317,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxStartStation" SelectedIndex="0" HorizontalAlignment="Left" Margin="317,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem>-SELECT-</ComboBoxItem>
             <ComboBoxItem>GALLE</ComboBoxItem>
             <ComboBoxItem>MATARA</ComboBoxItem>
         </ComboBox>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="557,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman">
+        <ComboBox x:Name="cmbBoxEndStation" SelectedIndex="0" HorizontalAlignment="Left" Margin="557,351,0,0" VerticalAlignment="Top" Width="130" Height="35" RenderTransformOrigin="0.403,0.035" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Times New Roman">
             <ComboBoxItem>-SELECT-</ComboBoxItem>
             <ComboBoxItem>GALLE</ComboBoxItem>
             <ComboBoxItem>MATARA</ComboBoxItem>
         </ComboBox>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="SEARCH" HorizontalAlignment="Left" Height="50" Margin="404,401,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold" MouseEnter="Button_MouseEnter"/>
+        <Button x:Name="btnSearch" Style="{StaticResource RoundedButtonStyle}" Content="SEARCH" HorizontalAlignment="Left" Height="50" Margin="404,401,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold" MouseEnter="Button_MouseEnter" Click="btnSearch_Click"/>
         <Ellipse HorizontalAlignment="Left" Height="110" Margin="45,368,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
             <Ellipse.Style>
                 <Style/>

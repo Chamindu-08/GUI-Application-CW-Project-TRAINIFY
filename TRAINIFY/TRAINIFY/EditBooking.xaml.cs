@@ -23,5 +23,28 @@ namespace TRAINIFY
         {
             InitializeComponent();
         }
+
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //if()
+                { }
+
+                //sql update database
+
+                MessageBox.Show("Booking edit Sucessful!");
+
+                // Create an object of the Home window, show and MainWindow hide
+                Home home1 = new Home();
+                home1.Show();
+                this.Hide();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }

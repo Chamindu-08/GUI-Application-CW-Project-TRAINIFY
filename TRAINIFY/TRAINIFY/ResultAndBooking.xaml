@@ -14,28 +14,20 @@
             <Grid Height="50" VerticalAlignment="Top" Margin="0,30,0,0">
                 <TextBlock Text="MENU" Foreground="White" HorizontalAlignment="Center" FontFamily="OCR A Extended" FontSize="40" VerticalAlignment="Center"></TextBlock>
             </Grid>
-            <Menu Height="605" Background="Transparent" Width="200" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-                <Menu.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleX="-0.201"/>
-                        <RotateTransform/>
-                        <TranslateTransform X="-0.796"/>
-                    </TransformGroup>
-                </Menu.RenderTransform>
+            <Menu Height="610" Background="Transparent" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
                         <VirtualizingStackPanel Orientation="Vertical"/>
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
 
-                <MenuItem Header="Home" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemHome" Header="Home" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemHome_Click">
                     <MenuItem.Icon>
                         <Image Source="icon/home.png" Stretch="Fill"/>
                     </MenuItem.Icon>
                 </MenuItem>
 
-                <MenuItem Header="Search" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemSearch" Header="Search" Width="100" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemSearch_Click">
                     <MenuItem.Icon>
                         <Image Source="icon/search.png" Stretch="Fill"/>
                     </MenuItem.Icon>
@@ -46,19 +38,19 @@
                         <Image Source="icon/cursor-finger.png" Stretch="Fill"/>
                     </MenuItem.Icon>
 
-                    <MenuItem Header="View Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemViewBooking" Header="View Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemViewBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/overview.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Edit Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemEditBooking" Header="Edit Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemEditBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/user-pen.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Delete Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemDeleteBooking" Header="Delete Booking" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemDeleteBooking_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/trash.png" Stretch="Fill"/>
                         </MenuItem.Icon>
@@ -70,20 +62,20 @@
                         <Image Source="icon/user.png" Stretch="Fill"/>
                     </MenuItem.Icon>
 
-                    <MenuItem Header="View Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemViewProfile" Header="View Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemViewProfile_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/overview.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem Header="Edit Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                    <MenuItem x:Name="menuItemEditProfile" Header="Edit Profile" Background="#FF002250" Foreground="White" FontFamily="Times New Roman" FontSize="20" Click="menuItemEditProfile_Click">
                         <MenuItem.Icon>
                             <Image Source="icon/user-pen.png" Stretch="Fill"/>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
 
-                <MenuItem Header="Contact Us" Width="120" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
+                <MenuItem x:Name="menuItemContactUs" Header="Contact Us" Width="120" Height="50" Foreground="White" FontFamily="Times New Roman" FontSize="20">
                     <MenuItem.Icon>
                         <Image Source="icon/phone-call.png" Stretch="Fill"/>
                     </MenuItem.Icon>
@@ -105,18 +97,18 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Label Content="Start Station :" HorizontalAlignment="Left" Margin="324,402,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label Content="Train :" HorizontalAlignment="Left" Margin="324,402,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Rectangle HorizontalAlignment="Left" Height="26" Margin="294,402,0,0" VerticalAlignment="Top" Width="25" RenderTransformOrigin="1.076,0.564">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/train-station.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="324,437,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxTrain" SelectedIndex="0" HorizontalAlignment="Left" Margin="324,437,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem>-SELECT-</ComboBoxItem>
             <ComboBoxItem>GALLE</ComboBoxItem>
             <ComboBoxItem>MATARA</ComboBoxItem>
         </ComboBox>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="BOOK NOW" HorizontalAlignment="Left" Height="50" Margin="317,552,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold"/>
+        <Button x:Name="btnBookNow" Style="{StaticResource RoundedButtonStyle}" Content="BOOK NOW" HorizontalAlignment="Left" Height="50" Margin="317,552,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold" Click="btnBookNow_Click"/>
         <Ellipse HorizontalAlignment="Left" Height="110" Margin="45,530,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
             <Ellipse.Style>
                 <Style/>
@@ -125,15 +117,15 @@
                 <ImageBrush ImageSource="/2024_01_03_21_12_IMG_4655.PNG"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="CANCEL" HorizontalAlignment="Left" Height="50" Margin="525,552,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold"/>
-        <DataGrid HorizontalAlignment="Left" Height="150" Margin="294,222,0,0" VerticalAlignment="Top" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="btnCancel" Style="{StaticResource RoundedButtonStyle}" Content="CANCEL" HorizontalAlignment="Left" Height="50" Margin="525,552,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold" Click="btnCancel_Click"/>
+        <DataGrid x:Name="dataGridTrainDetails" HorizontalAlignment="Left" Height="150" Margin="294,222,0,0" VerticalAlignment="Top" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Label Content="Time :" HorizontalAlignment="Left" Margin="324,473,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Rectangle HorizontalAlignment="Left" Height="26" Margin="294,473,0,0" VerticalAlignment="Top" Width="25" RenderTransformOrigin="1.076,0.564">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/clock.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="324,508,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxTime" SelectedIndex="0" HorizontalAlignment="Left" Margin="324,508,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
             <ComboBoxItem Content="9.00 AM"/>
             <ComboBoxItem Content="10.00 AM"/>
@@ -144,12 +136,12 @@
                 <ImageBrush ImageSource="/money-check.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <CheckBox Content="1st Class" HorizontalAlignment="Left" Height="20" Margin="554,437,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
-        <CheckBox Content="2nd Class" HorizontalAlignment="Left" Height="20" Margin="554,462,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
-        <CheckBox Content="3rd Class" HorizontalAlignment="Left" Height="20" Margin="554,486,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
-        <TextBox HorizontalAlignment="Left" Margin="644,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="644,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="644,486,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <CheckBox x:Name="CheckBox1Class" Content="1st Class" HorizontalAlignment="Left" Height="20" Margin="554,437,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <CheckBox x:Name="CheckBox2Class" Content="2nd Class" HorizontalAlignment="Left" Height="20" Margin="554,462,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <CheckBox x:Name="CheckBox3Class" Content="3rd Class" HorizontalAlignment="Left" Height="20" Margin="554,486,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
+        <TextBox x:Name="txt1Class" HorizontalAlignment="Left" Margin="644,437,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox x:Name="txt2Class" HorizontalAlignment="Left" Margin="644,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox x:Name="txt3Class" HorizontalAlignment="Left" Margin="644,486,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
         <Label Content="Trains" HorizontalAlignment="Left" Margin="294,173,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" FontWeight="Bold"/>
     </Grid>
 </Window>

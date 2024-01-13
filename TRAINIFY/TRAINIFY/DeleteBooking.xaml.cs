@@ -23,5 +23,18 @@ namespace TRAINIFY
         {
             InitializeComponent();
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            // Create an object of the Home window, show and MainWindow hide
+            Home home1 = new Home();
+            home1.Show();
+            this.Hide();
+        }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+            //sql quary
+        }
     }
 }
