@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,8 @@ namespace TRAINIFY
     /// </summary>
     public partial class DeleteBooking : Window
     {
+        //create database connection
+        DBConnection dBConnectionVB = new DBConnection();
         public DeleteBooking()
         {
             InitializeComponent();
@@ -35,6 +38,12 @@ namespace TRAINIFY
         private void btnView_Click(object sender, RoutedEventArgs e)
         {
             //sql quary
+        }
+
+        private void cmbBoxBooking_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+            
+
         }
     }
 }

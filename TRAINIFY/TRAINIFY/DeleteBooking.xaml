@@ -26,7 +26,7 @@
         </Ellipse>
         <Label Content="Delete Booking" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
         <Label Content="Booking ID :" HorizontalAlignment="Left" Margin="192,220,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxBooking" SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16" ContextMenuOpening="cmbBoxBooking_ContextMenuOpening">
             <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
         <Label Content="Train :" HorizontalAlignment="Left" Margin="192,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
