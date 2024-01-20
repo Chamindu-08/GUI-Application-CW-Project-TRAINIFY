@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,8 @@ namespace TRAINIFY
     /// </summary>
     public partial class EditProfile : Window
     {
+        DBConnection DBConnectionER = new DBConnection();
+
         public EditProfile()
         {
             InitializeComponent();
@@ -89,9 +92,18 @@ namespace TRAINIFY
                     return;
                 }
 
-                MessageBox.Show("Edit profile Succesfull!");
+                Login l1 = new Login();
+                string userName = l1.GetUserName;
 
                 //database quary
+                string sql = "UPDATE Passenger " +
+                             "SET P_Name='" + txtFirstName.Text + "', NIC='" + txtNIC.Text + "', P_Address='" + txtAddress.Text + "', Contact_No='" + Convert.ToInt32(txtContactNo.Text) + "', Email='" + txtEmail.Text + "', P_Password='" + txtPassword.Text + "' " +
+                             "WHERE P_ID = '" + userName + "'";
+
+                SqlCommand command1 = new SqlCommand(sql, DBConnectionER.GetDBConnection());
+                command1.ExecuteNonQuery();
+
+                MessageBox.Show("Edit profile Succesfull!");
 
                 // Create an object of the login window, show and MainWindow hide
                 Home home1 = new Home();

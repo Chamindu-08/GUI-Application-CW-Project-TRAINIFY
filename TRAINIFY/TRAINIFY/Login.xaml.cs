@@ -51,6 +51,7 @@ namespace TRAINIFY
 
                         if(Password == storePassword)
                         {
+                            userName = txtUserName.Text;
                             // Create an object of the Home window, show and MainWindow hide
                             Home home1 = new Home();
                             home1.Show();
@@ -79,6 +80,19 @@ namespace TRAINIFY
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Register register1 = new Register();
+            register1.Show();
+            this.Hide();
+        }
+
+        private string userName;
+        public string GetUserName
+        {
+            get { return userName; }
         }
     }
 }

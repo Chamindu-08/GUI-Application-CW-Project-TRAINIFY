@@ -26,25 +26,25 @@
         </Ellipse>
         <Label Content="Edit Booking" HorizontalAlignment="Left" Height="66" Margin="75,75,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
         <Label Content="Booking Id" HorizontalAlignment="Left" Margin="192,220,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxBookingID" SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
         <Label Content="Train :" HorizontalAlignment="Left" Margin="192,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="Time :" HorizontalAlignment="Left" Margin="192,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Button x:Name="btnConfirm" Style="{StaticResource RoundedButtonStyle}" Content="CONFIRM" HorizontalAlignment="Center" Height="50" Margin="0,445,0,0" VerticalAlignment="Top" Width="200" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Click="btnConfirm_Click"/>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="270,263,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxTrain" SelectedIndex="0" HorizontalAlignment="Left" Margin="270,263,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="270,306,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxTime" SelectedIndex="0" HorizontalAlignment="Left" Margin="270,306,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
         <CheckBox Content="1st Class" HorizontalAlignment="Left" Height="20" Margin="283,354,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
         <CheckBox Content="2nd Class" HorizontalAlignment="Left" Height="20" Margin="283,379,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
         <CheckBox Content="3rd Class" HorizontalAlignment="Left" Height="20" Margin="283,403,0,0" VerticalAlignment="Top" Width="80" FontFamily="Times New Roman" FontSize="15"/>
-        <TextBox HorizontalAlignment="Left" Margin="373,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="373,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="373,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox x:Name="txt1CQ" HorizontalAlignment="Left" Margin="373,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox x:Name="txt2CQ" HorizontalAlignment="Left" Margin="373,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
+        <TextBox x:Name="txt3CQ" HorizontalAlignment="Left" Margin="373,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="20"/>
 
     </Grid>
 </Window>

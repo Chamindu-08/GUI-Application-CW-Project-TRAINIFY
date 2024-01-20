@@ -25,24 +25,76 @@ namespace TRAINIFY
         public DeleteBooking()
         {
             InitializeComponent();
+
+            SetBookingIDComboBoxValues();
+        }
+
+        private void SetBookingIDComboBoxValues()
+        {
+            try
+            {
+                Login l2 = new Login();
+                string userName1 = l2.GetUserName;
+
+                string sql = "SELECT Booking.Booking_ID " +
+                             "FROM Passenger INNER JOIN Booking " +
+                             "ON Passenger.P_ID = Booking.P_ID " +
+                             "WHERE Passenger.P_ID = @UserName";
+
+                SqlCommand commandRB = new SqlCommand(sql, dBConnectionVB.GetDBConnection());
+
+                SqlDataReader reader = commandRB.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cmbBoxBooking.Items.Add(reader["Booking_ID"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnView_Click(object sender, RoutedEventArgs e)
+        {
+            // Create an object of the Home window, show and MainWindow hide
+            try
+            {
+                if (cmbBoxBooking.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select Booking");
+                }
+
+                string bookingID = cmbBoxBooking.SelectedItem.ToString();
+
+                string sql = "DELETE FROM Booking " +
+                            "WHERE Booking_ID = '" + bookingID + "'";
+
+                SqlCommand commandRB = new SqlCommand(sql, dBConnectionVB.GetDBConnection());
+                commandRB.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            // Create an object of the Home window, show and MainWindow hide
             Home home1 = new Home();
             home1.Show();
             this.Hide();
         }
 
-        private void btnView_Click(object sender, RoutedEventArgs e)
+        private void cmbBoxBooking_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //sql quary
+
         }
 
         private void cmbBoxBooking_ContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
-            
 
         }
     }

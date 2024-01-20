@@ -28,5 +28,12 @@ namespace TRAINIFY
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Home home1 = new Home();
+            home1.Show();
+            this.Hide();
+        }
     }
 }

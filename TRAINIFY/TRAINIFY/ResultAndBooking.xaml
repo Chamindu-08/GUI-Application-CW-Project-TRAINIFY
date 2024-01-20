@@ -104,9 +104,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <ComboBox x:Name="cmbBoxTrain" SelectedIndex="0" HorizontalAlignment="Left" Margin="324,437,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
-            <ComboBoxItem>-SELECT-</ComboBoxItem>
-            <ComboBoxItem>GALLE</ComboBoxItem>
-            <ComboBoxItem>MATARA</ComboBoxItem>
+            <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
         <Button x:Name="btnBookNow" Style="{StaticResource RoundedButtonStyle}" Content="BOOK NOW" HorizontalAlignment="Left" Height="50" Margin="317,552,0,0" VerticalAlignment="Top" Width="180" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" FontWeight="Bold" Click="btnBookNow_Click"/>
         <Ellipse HorizontalAlignment="Left" Height="110" Margin="45,530,0,0" Stroke="Black" VerticalAlignment="Top" Width="110">
@@ -127,8 +125,6 @@
         </Rectangle>
         <ComboBox x:Name="cmbBoxTime" SelectedIndex="0" HorizontalAlignment="Left" Margin="324,508,0,0" VerticalAlignment="Top" Width="110" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
-            <ComboBoxItem Content="9.00 AM"/>
-            <ComboBoxItem Content="10.00 AM"/>
         </ComboBox>
         <Label Content="Tickets :" HorizontalAlignment="Left" Margin="554,404,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
         <Rectangle HorizontalAlignment="Left" Height="26" Margin="524,406,0,0" VerticalAlignment="Top" Width="25" RenderTransformOrigin="1.076,0.564">

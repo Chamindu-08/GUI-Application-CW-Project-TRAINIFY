@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography.X509Certificates;
 
 namespace TRAINIFY
 {
@@ -19,9 +22,69 @@ namespace TRAINIFY
     /// </summary>
     public partial class ResultAndBooking : Window
     {
-        public ResultAndBooking()
+        private string sStation;
+        public ResultAndBooking(string selectedStation)
         {
             InitializeComponent();
+
+            this.sStation = selectedStation;
+
+            LoadDataGridView();
+            SetComboBoxValues();
+        }
+
+        public void LoadDataGridView()
+        {
+            string sql = "SELECT Train.Train_Name, Station.Station_Name, Station_Train.Arrival_Time " +
+         "FROM Train " +
+         "INNER JOIN Station_Train ON Train.Train_ID = Station_Train.Train_Id " +
+         "INNER JOIN [Station] ON [Station].Station_ID = Station_Train.Station_ID " +
+         "WHERE [Station].Station_Name = @sStation";
+
+            DBConnection connectionRB = new DBConnection();
+
+            using (SqlCommand commandRB = new SqlCommand(sql, connectionRB.GetDBConnection()))
+            {
+                commandRB.Parameters.AddWithValue("@sStation", sStation);
+
+                SqlDataAdapter adapterH = new SqlDataAdapter(commandRB);
+
+                DataTable tableH = new DataTable();
+
+                adapterH.Fill(tableH);
+
+                dataGridTrainDetails.ItemsSource = tableH.DefaultView;
+            }
+        }
+
+        private void SetComboBoxValues()
+        {
+            try
+            {
+                string sql = "SELECT Train.Train_Name " +
+                     "FROM Train " +
+                     "INNER JOIN Station_Train ON Train.Train_ID = Station_Train.Train_Id " +
+                     "INNER JOIN [Station] ON [Station].Station_ID = Station_Train.Station_ID " +
+                     "WHERE [Station].Station_Name = @sStation";
+
+                DBConnection connectionRB = new DBConnection();
+
+                using (SqlCommand commandRB = new SqlCommand(sql, connectionRB.GetDBConnection()))
+                {
+                    commandRB.Parameters.AddWithValue("@sStation", sStation);
+
+                    SqlDataReader reader = commandRB.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        cmbBoxTrain.Items.Add(reader["Train_Name"].ToString());
+                    }
+                }
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void menuItemHome_Click(object sender, RoutedEventArgs e)

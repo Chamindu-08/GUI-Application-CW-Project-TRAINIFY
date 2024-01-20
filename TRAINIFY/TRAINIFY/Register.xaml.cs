@@ -117,7 +117,7 @@ namespace TRAINIFY
                 sqlCommand.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                 sqlCommand.Parameters.AddWithValue("@NIC", txtNIC.Text);
                 sqlCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
-                sqlCommand.Parameters.AddWithValue("@ContactNo", txtContactNo.Text);
+                sqlCommand.Parameters.AddWithValue("@ContactNo", Convert.ToInt32(txtContactNo.Text));
                 sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
                 sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text);
 

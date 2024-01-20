@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -138,14 +140,19 @@ namespace TRAINIFY
         {
             try
             {
-                if(string.IsNullOrEmpty(cmbBoxStartStation.Text) && string.IsNullOrEmpty(cmbBoxEndStation.Text))
+                if(cmbBoxStartStation.SelectedIndex == 0 || cmbBoxEndStation.SelectedIndex == 0) 
                 {
                     MessageBox.Show("Please select the stations");
+                    return;
                 }
+
                 // Create an object of the Home window, show and MainWindow hide
-                ResultAndBooking resultAndBooking = new ResultAndBooking();
+                string selectedStation = cmbBoxStartStation.SelectedItem.ToString();
+
+                ResultAndBooking resultAndBooking = new ResultAndBooking(selectedStation);
                 resultAndBooking.Show();
                 this.Hide();
+
             }
             catch (Exception ex)
             {
@@ -153,4 +160,5 @@ namespace TRAINIFY
             }
         }
     }
+
 }
