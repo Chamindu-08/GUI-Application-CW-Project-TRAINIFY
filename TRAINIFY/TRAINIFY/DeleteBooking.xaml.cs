@@ -22,29 +22,28 @@ namespace TRAINIFY
     {
         //create database connection
         DBConnection dBConnectionVB = new DBConnection();
-        public DeleteBooking()
+        private string uName;
+        public DeleteBooking(string uName)
         {
             InitializeComponent();
 
             SetBookingIDComboBoxValues();
+            this.uName = uName;
         }
 
         private void SetBookingIDComboBoxValues()
         {
             try
             {
-                Login l2 = new Login();
-                string userName1 = l2.GetUserName;
-
                 string sql = "SELECT Booking.Booking_ID " +
-                             "FROM Passenger INNER JOIN Booking " +
-                             "ON Passenger.P_ID = Booking.P_ID " +
-                             "WHERE Passenger.P_ID = @UserName";
+                    "FROM Passenger INNER JOIN Booking " +
+                    "ON Passenger.P_ID = Booking.P_ID " +
+                    $"WHERE Passenger.P_ID = '{uName}'";
 
                 SqlCommand commandRB = new SqlCommand(sql, dBConnectionVB.GetDBConnection());
 
                 SqlDataReader reader = commandRB.ExecuteReader();
-
+                cmbBoxBooking.Items.Clear();
                 while (reader.Read())
                 {
                     cmbBoxBooking.Items.Add(reader["Booking_ID"].ToString());
@@ -83,7 +82,7 @@ namespace TRAINIFY
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            Home home1 = new Home();
+            Home home1 = new Home(uName);
             home1.Show();
             this.Hide();
         }

@@ -21,10 +21,11 @@ namespace TRAINIFY
     public partial class EditBooking : Window
     {
         DBConnection connectionEB = new DBConnection();
-        public EditBooking()
+        private string uName;
+        public EditBooking(string uName)
         {
             InitializeComponent();
-
+            this.uName = uName;
             SetBookingIDComboBoxValues();
 
         }
@@ -33,13 +34,10 @@ namespace TRAINIFY
         {
             try
             {
-                Login l2 = new Login();
-                string userName1 = l2.GetUserName;
-
                 string sql = "SELECT Booking.Booking_ID " +
                              "FROM Passenger INNER JOIN Booking " +
                              "ON Passenger.P_ID = Booking.P_ID " +
-                             "WHERE Passenger.P_ID = @UserName";
+                             $"WHERE Passenger.P_ID = '{uName}'";
 
                 SqlCommand commandRB = new SqlCommand(sql, connectionEB.GetDBConnection());
                 
@@ -117,7 +115,7 @@ namespace TRAINIFY
                 MessageBox.Show("Booking edit Sucessful!");
 
                 // Create an object of the Home window, show and MainWindow hide
-                Home home1 = new Home();
+                Home home1 = new Home(uName);
                 home1.Show();
                 this.Hide();
             }

@@ -21,10 +21,12 @@ namespace TRAINIFY
     public partial class EditProfile : Window
     {
         DBConnection DBConnectionER = new DBConnection();
+        private string uName;
 
-        public EditProfile()
+        public EditProfile(string uName)
         {
             InitializeComponent();
+            this.uName = uName;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -92,13 +94,10 @@ namespace TRAINIFY
                     return;
                 }
 
-                Login l1 = new Login();
-                string userName = l1.GetUserName;
-
                 //database quary
                 string sql = "UPDATE Passenger " +
                              "SET P_Name='" + txtFirstName.Text + "', NIC='" + txtNIC.Text + "', P_Address='" + txtAddress.Text + "', Contact_No='" + Convert.ToInt32(txtContactNo.Text) + "', Email='" + txtEmail.Text + "', P_Password='" + txtPassword.Text + "' " +
-                             "WHERE P_ID = '" + userName + "'";
+                             "WHERE P_ID = '" + uName + "'";
 
                 SqlCommand command1 = new SqlCommand(sql, DBConnectionER.GetDBConnection());
                 command1.ExecuteNonQuery();
@@ -106,7 +105,7 @@ namespace TRAINIFY
                 MessageBox.Show("Edit profile Succesfull!");
 
                 // Create an object of the login window, show and MainWindow hide
-                Home home1 = new Home();
+                Home home1 = new Home(uName);
                 home1.Show();
                 this.Hide();
 

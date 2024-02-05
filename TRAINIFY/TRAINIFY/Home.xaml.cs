@@ -21,9 +21,11 @@ namespace TRAINIFY
     /// </summary>
     public partial class Home : Window
     {
-        public Home()
+        private string uName;
+        public Home(string UserName)
         {
             InitializeComponent();
+            this.uName = UserName;
         }
 
         private void Button_MouseEnter(object sender, MouseEventArgs e)
@@ -36,7 +38,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                Home home1 = new Home();
+                Home home1 = new Home(uName);
                 home1.Show();
                 this.Hide();
             }
@@ -51,7 +53,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                Home home1 = new Home();
+                Home home1 = new Home(uName);
                 home1.Show();
                 this.Hide();
             }
@@ -66,7 +68,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                ViewBookings bookingsV = new ViewBookings();
+                ViewBookings bookingsV = new ViewBookings(uName);
                 bookingsV.Show();
                 this.Hide();
             }
@@ -81,7 +83,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                EditBooking bookingsE = new EditBooking();
+                EditBooking bookingsE = new EditBooking(uName);
                 bookingsE.Show();
                 this.Hide();
             }
@@ -96,7 +98,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                DeleteBooking bookingsD = new DeleteBooking();
+                DeleteBooking bookingsD = new DeleteBooking(uName);
                 bookingsD.Show();
                 this.Hide();
             }
@@ -111,7 +113,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                ViewProfile profileV = new ViewProfile();
+                ViewProfile profileV = new ViewProfile(uName);
                 profileV.Show();
                 this.Hide();
             }
@@ -126,7 +128,7 @@ namespace TRAINIFY
             try
             {
                 // Create an object of the Home window, show and MainWindow hide
-                EditProfile profileE = new EditProfile();
+                EditProfile profileE = new EditProfile(uName);
                 profileE.Show();
                 this.Hide();
             }
@@ -147,9 +149,9 @@ namespace TRAINIFY
                 }
 
                 // Create an object of the Home window, show and MainWindow hide
-                string selectedStation = cmbBoxStartStation.SelectedItem.ToString();
+                string selectedStation = cmbBoxStartStation.SelectedIndex.ToString();
 
-                ResultAndBooking resultAndBooking = new ResultAndBooking(selectedStation);
+                ResultAndBooking resultAndBooking = new ResultAndBooking(uName,selectedStation);
                 resultAndBooking.Show();
                 this.Hide();
 

@@ -19,9 +19,11 @@ namespace TRAINIFY
     /// </summary>
     public partial class ViewBookings : Window
     {
-        public ViewBookings()
+        private string uName;
+        public ViewBookings(string uName)
         {
             InitializeComponent();
+            this.uName = uName;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -31,7 +33,7 @@ namespace TRAINIFY
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Home home1 = new Home();
+            Home home1 = new Home(uName);
             home1.Show();
             this.Hide();
         }
