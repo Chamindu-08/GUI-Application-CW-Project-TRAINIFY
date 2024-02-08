@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +27,33 @@ namespace TRAINIFY
             this.uName = uName;
         }
 
-        public void getPersonalDetails() 
+        //display the personal details of the user
+        private void getPersonalDetails()
         {
-            
+            //create database connection
+            DBConnection DBConnectionVP = new DBConnection();
+            try
+            {
+                //query to get the personal details of the user
+                string sql = $"SELECT P_Name, NIC, P_Address, Contact_No, Email, P_Password FROM Passenger WHERE Email = '{uName}'";
+                SqlCommand commandVP = new SqlCommand(sql, DBConnectionVP.GetDBConnection());
+                SqlDataReader reader = commandVP.ExecuteReader();
+                while (reader.Read())
+                {
+                    //display the personal details of the user
+                    txtName.Text = reader["First_Name"].ToString();
+                    txtLastName.Text = reader["First_Name"].ToString();
+                    txtAddress.Text = reader["Address"].ToString();
+                    txtEmail.Text = reader["Email"].ToString();
+                    txtNIC.Text = reader["NIC"].ToString();
+                    txtContact.Text = reader["Contact_Number"].ToString();
+                    txtPassword.Text = reader["Password"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

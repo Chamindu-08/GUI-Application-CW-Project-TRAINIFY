@@ -97,7 +97,7 @@ namespace TRAINIFY
                 //database quary
                 string sql = "UPDATE Passenger " +
                              "SET P_Name='" + txtFirstName.Text + "', NIC='" + txtNIC.Text + "', P_Address='" + txtAddress.Text + "', Contact_No='" + Convert.ToInt32(txtContactNo.Text) + "', Email='" + txtEmail.Text + "', P_Password='" + txtPassword.Text + "' " +
-                             "WHERE P_ID = '" + uName + "'";
+                             $"WHERE P_ID = '{uName}'";
 
                 SqlCommand command1 = new SqlCommand(sql, DBConnectionER.GetDBConnection());
                 command1.ExecuteNonQuery();

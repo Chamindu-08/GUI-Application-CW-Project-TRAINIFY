@@ -120,11 +120,11 @@ namespace TRAINIFY
                 SqlCommand commandRB1 = new SqlCommand(sql, connectionRB.GetDBConnection());
 
                 SqlDataReader reader = commandRB1.ExecuteReader();
-                cmbBoxTrain.Items.Clear();
+                cmbBoxTime.Items.Clear();
 
                 while (reader.Read())
                 {
-                    cmbBoxTrain.Items.Add(reader["Arrival_Time"].ToString());
+                    cmbBoxTime.Items.Add(reader["Arrival_Time"].ToString());
                 }
             }
             catch (Exception ex)
@@ -243,51 +243,68 @@ namespace TRAINIFY
             try
             {
                 //validation
-                if(cmbBoxTrain.SelectedItem == null) 
+                if (cmbBoxTrain.SelectedItem == null)
                 {
-                    MessageBox.Show("Select Train");
+                    MessageBox.Show("Please select a train");
+                    return;
                 }
 
-                if(cmbBoxTime.SelectedItem == null)
+                if (cmbBoxTime.SelectedItem == null)
                 {
-                    MessageBox.Show("Select Time");
+                    MessageBox.Show("Please select a time");
+                    return;
                 }
 
-                if(CheckBox1Class.IsChecked == true && string.IsNullOrEmpty(txt1Class.Text)) 
+                if (string.IsNullOrEmpty(txt1Class.Text))
                 {
-                    MessageBox.Show("Select Time");
+                    MessageBox.Show("Please enter 1st class quantity");
+                    return;
+                }
+                
+                if (string.IsNullOrEmpty(txt2Class.Text))
+                {
+                    MessageBox.Show("Please enter 2nd class quantity");
+                    return;
                 }
 
-                if (CheckBox1Class.IsChecked == true && string.IsNullOrEmpty(txt1Class.Text))
+                if (string.IsNullOrEmpty(txt3Class.Text))
                 {
-                    MessageBox.Show("Select Time");
+                    MessageBox.Show("Please enter 3rd class quantity");
+                    return;
                 }
 
-                if (CheckBox1Class.IsChecked == true && string.IsNullOrEmpty(txt1Class.Text))
-                {
-                    MessageBox.Show("Select Time");
-                }
+                //generate booking id
+                string bookingId = GenerateBookingID();
 
-                string bookingId = GeneratePassengerID();
-
+                //get passenger id
                 string pID = "SELECT P_ID FROM Passenger " +
                     $"WHERE Email='{uName}'";
                 SqlCommand commandRB = new SqlCommand(pID, connectionRB.GetDBConnection());
                 object result = commandRB.ExecuteScalar();
                 string pId = result.ToString();
 
+                //get train name
                 string train = cmbBoxTrain.SelectedItem.ToString();
 
+                //get train id
                 string tID = "SELECT Train_ID FROM Train " +
                     $"WHERE Train_Name='{train}'";
-                SqlCommand commandRB1 = new SqlCommand(pID, connectionRB.GetDBConnection());
-                object result1 = commandRB1.ExecuteScalar();
-                string trainId = result.ToString();
+                SqlCommand commandRB1 = new SqlCommand(tID, connectionRB.GetDBConnection());
+                string trainId = commandRB1.ExecuteScalar().ToString();
+
+                //get current date
+                string date = DateTime.Now.ToString("yyyy-MM-dd");
+
+                //get 1st class, 2nd class, 3rd class from user input
+                string firstClass = txt1Class.Text;
+                string secondClass = txt2Class.Text;
+                string thirdClass = txt3Class.Text;
+
 
                 //sql quary database insert data
                 string sql = "INSERT INTO Booking(Booking_ID, StartStation, TQ1stClass, TQ2ndClass, TQ3rdClass , Booking_Date, P_ID, Train_ID) " +
                     "VALUES " +
-                    $"('{bookingId}','{sStation}','"+ txt1Class.Text +"','"+ txt2Class.Text +"','"+ txt3Class.Text + "',GETDATE(),'{pId}','{trainId}')";
+                    $"('{bookingId}','{sStation}','{firstClass}','{secondClass}','{thirdClass}','{date}','{pId}','{trainId}')";
 
                 SqlCommand commandRB2 = new SqlCommand(sql, connectionRB.GetDBConnection());
                 commandRB2.ExecuteNonQuery();
@@ -306,7 +323,7 @@ namespace TRAINIFY
         }
 
         //genarate bookingID
-        public string GeneratePassengerID()
+        public string GenerateBookingID()
         {
             try
             {

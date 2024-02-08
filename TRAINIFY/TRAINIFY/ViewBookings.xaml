@@ -26,19 +26,19 @@
         </Ellipse>
         <Label Content="View Booking" HorizontalAlignment="Left" Height="66" Margin="65,64,0,0" VerticalAlignment="Top" Width="220" VerticalContentAlignment="Center" FontSize="22" FontFamily="Times New Roman" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" FontWeight="Bold"/>
         <Label Content="Booking ID :" HorizontalAlignment="Left" Margin="192,220,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <ComboBox SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
+        <ComboBox x:Name="cmbBoxBooking" SelectedIndex="0" HorizontalAlignment="Left" Margin="333,223,0,0" VerticalAlignment="Top" Width="180" Height="30" RenderTransformOrigin="0.403,0.035" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Times New Roman" FontSize="16">
             <ComboBoxItem Content="-SELECT-"/>
         </ComboBox>
-        <Label Content="Train :" HorizontalAlignment="Left" Margin="192,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <Label Content="Time :" HorizontalAlignment="Left" Margin="192,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="268,345,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="241,466,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.466,0.509"/>
-        <Button Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Left" Height="50" Margin="386,466,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Click="Button_Click"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="268,380,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="268,415,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="268,303,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="268,260,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
+        <Label Content="Train :" HorizontalAlignment="Left" Margin="192,0,0,0" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label Content="Station :" HorizontalAlignment="Left" Margin="192,320,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label Content="Tickets :" HorizontalAlignment="Left" Margin="192,375,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120"/>
+        <Label x:Name="lbl1C" Content="" HorizontalAlignment="Left" Margin="278,375,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="50" Background="White"/>
+        <Button x:Name="btnView" Style="{StaticResource RoundedButtonStyle}" Content="VIEW" HorizontalAlignment="Left" Height="50" Margin="241,449,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" RenderTransformOrigin="0.5,0.5" Click="btnView_Click"/>
+        <Button x:Name="btnHome" Style="{StaticResource RoundedButtonStyle}" Content="HOME" HorizontalAlignment="Left" Height="50" Margin="386,449,0,0" VerticalAlignment="Top" Width="100" FontSize="25" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" FontFamily="Times New Roman" Click="btnHome_Click"/>
+        <Label x:Name="lblStation" Content="" HorizontalAlignment="Left" Margin="268,320,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="120" Background="White"/>
+        <Label x:Name="lblTrain" Content="" HorizontalAlignment="Left" Margin="268,0,0,0" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="20" Height="30" Width="180" Background="White"/>
+        <Label x:Name="lbl2C" Content="" HorizontalAlignment="Left" Margin="350,375,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="50" Background="White"/>
+        <Label x:Name="lbl3C" Content="" HorizontalAlignment="Left" Margin="423,375,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="20" Height="30" Width="50" Background="White"/>
 
     </Grid>
 </Window>

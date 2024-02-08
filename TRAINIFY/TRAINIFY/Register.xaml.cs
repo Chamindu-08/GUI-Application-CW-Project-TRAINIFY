@@ -99,28 +99,24 @@ namespace TRAINIFY
                     MessageBox.Show("This email is already registered. Please use a different email.");
                     return;
                 }
-
+                //generate passenger ID
                 string PID = GeneratePassengerID();
 
+                //get the values from the text boxes
+                string fName = txtFirstName.Text;
+                string address = txtAddress.Text;
+                string email = txtEmail.Text;
+                string nic = txtNIC.Text;
+                string contactNo = txtContactNo.Text;
+                string password = txtPassword.Text;
+
                 //database quary
-                /* string sqiQueryRegister = "INSERT INTO Passenger(P_ID, P_Name, NIC, P_Address, Contact_No, Email, P_Password)" +
+                string sqiQueryRegister = "INSERT INTO Passenger(P_ID, P_Name, NIC, P_Address, Contact_No, Email, P_Password)" +
                                            "VALUES" +
-                                           $"('{PID}','"+txtFirstName.Text+"','"+txtNIC.Text+"','"+txtAddress.Text+"','"+txtContactNo.Text+"','"+txtEmail.Text+"','"+txtPassword.Text+"')";
-                */
+                                           $"('{PID}','{fName}','{nic}','{address}','{contactNo}','{email}','{password}')";
 
-                string sqlQueryInsertData = "INSERT INTO Passenger (P_ID, P_Name, NIC, P_Address, Contact_No, Email, P_Password)" +
-                           "VALUES (@PID, @FirstName, @NIC, @Address, @ContactNo, @Email, @Password)";
-
-                SqlCommand sqlCommand = new SqlCommand(sqlQueryInsertData, DBConnectionRegister.GetDBConnection());
+                SqlCommand sqlCommand = new SqlCommand(sqiQueryRegister, DBConnectionRegister.GetDBConnection());
                 
-                sqlCommand.Parameters.AddWithValue("@PID", PID);
-                sqlCommand.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
-                sqlCommand.Parameters.AddWithValue("@NIC", txtNIC.Text);
-                sqlCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
-                sqlCommand.Parameters.AddWithValue("@ContactNo", Convert.ToInt32(txtContactNo.Text));
-                sqlCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
-                sqlCommand.Parameters.AddWithValue("@Password", txtPassword.Text);
-
                 sqlCommand.ExecuteNonQuery();
                 
                 MessageBox.Show("Registation Succesfull!");
