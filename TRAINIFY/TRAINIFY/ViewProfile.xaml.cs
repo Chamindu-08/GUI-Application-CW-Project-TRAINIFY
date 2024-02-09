@@ -25,6 +25,8 @@ namespace TRAINIFY
         {
             InitializeComponent();
             this.uName = uName;
+
+            getPersonalDetails();
         }
 
         //display the personal details of the user
@@ -41,13 +43,13 @@ namespace TRAINIFY
                 while (reader.Read())
                 {
                     //display the personal details of the user
-                    txtName.Text = reader["First_Name"].ToString();
-                    txtLastName.Text = reader["First_Name"].ToString();
-                    txtAddress.Text = reader["Address"].ToString();
+                    txtName.Text = reader["P_Name"].ToString();
+                    txtLastName.Text = reader["P_Name"].ToString();
+                    txtAddress.Text = reader["P_Address"].ToString();
                     txtEmail.Text = reader["Email"].ToString();
                     txtNIC.Text = reader["NIC"].ToString();
-                    txtContact.Text = reader["Contact_Number"].ToString();
-                    txtPassword.Text = reader["Password"].ToString();
+                    txtContact.Text = reader["Contact_No"].ToString();
+                    txtPassword.Text = reader["P_Password"].ToString();
                 }
             }
             catch (Exception ex)

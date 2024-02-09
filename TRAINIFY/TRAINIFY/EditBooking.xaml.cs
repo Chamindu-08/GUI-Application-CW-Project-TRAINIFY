@@ -37,7 +37,7 @@ namespace TRAINIFY
                 string sql = "SELECT Booking.Booking_ID " +
                              "FROM Passenger INNER JOIN Booking " +
                              "ON Passenger.P_ID = Booking.P_ID " +
-                             $"WHERE Passenger.P_ID = '{uName}'";
+                             $"WHERE Passenger.Email = '{uName}'";
 
                 SqlCommand commandRB = new SqlCommand(sql, connectionEB.GetDBConnection());
                 
@@ -54,7 +54,51 @@ namespace TRAINIFY
                 MessageBox.Show(ex.Message);
             }
         }
-   
+
+        private void SetComboBoxTrainValues()
+        {
+            try
+            {
+                string sql = "SELECT Train_Name FROM Train";
+
+                SqlCommand commandRB = new SqlCommand(sql, connectionEB.GetDBConnection());
+
+                SqlDataReader reader = commandRB.ExecuteReader();
+                cmbBoxTrain.Items.Clear();
+
+                while (reader.Read())
+                {
+                    cmbBoxTrain.Items.Add(reader["Train_Name"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void SetComboBoxTimeValues()
+        {
+            try
+            {
+                string sql = "SELECT Arrival_Time FROM Station_Train";
+
+                SqlCommand commandRB1 = new SqlCommand(sql, connectionEB.GetDBConnection());
+
+                SqlDataReader reader = commandRB1.ExecuteReader();
+                cmbBoxTime.Items.Clear();
+
+                while (reader.Read())
+                {
+                    cmbBoxTime.Items.Add(reader["Arrival_Time"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             try

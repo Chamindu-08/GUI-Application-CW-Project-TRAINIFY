@@ -26,9 +26,9 @@ namespace TRAINIFY
         public DeleteBooking(string uName)
         {
             InitializeComponent();
-
-            SetBookingIDComboBoxValues();
             this.uName = uName;
+            SetBookingIDComboBoxValues();
+            
         }
 
         private void SetBookingIDComboBoxValues()
